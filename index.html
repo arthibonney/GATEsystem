@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <title>Journey - Personnel Evaluation &amp; Professional Learning System | A Polk County Public Schools Project</title>
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.13.custom.css">
+	<link rel="stylesheet" href="css/styles.less?appversion=v8.104">
+    <script src="Scripts/require.js"></script>
+    <script>
+    requirejs.config({ urlArgs: "appversion=v8.104" });
+    require({
+        baseUrl: './Scripts',
+        paths: {
+            Pages: 'Pages',
+            Services: 'Services',
+            Lib: '_lib'
+        },
+        priority: ['Lib/jquery','Lib/version']   //['Lib/jquery']
+    }, ['Pages/Default']);
+    </script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery" src="./Scripts/_lib/jquery.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/version" src="./Scripts/_lib/version.js?appversion=v8.104"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Pages/Default" src="./Scripts/Pages/Default.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/utility" src="./Scripts/_lib/utility.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/serviceConfig" src="./Scripts/Services/serviceConfig.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/authorizationService" src="./Scripts/Services/authorizationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/less" src="./Scripts/_lib/less.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/modernizr" src="./Scripts/_lib/modernizr.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie" src="./Scripts/_lib/jquery.cookie.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie.security" src="./Scripts/_lib/jquery.cookie.security.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery-ui" src="./Scripts/_lib/jquery-ui.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/observationService" src="./Scripts/Services/observationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.blockUI" src="./Scripts/_lib/jquery.blockUI.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.notice" src="./Scripts/_lib/jquery.notice.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.fileDownload" src="./Scripts/_lib/jquery.fileDownload.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/json2" src="./Scripts/_lib/json2.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.service_wrapper" src="./Scripts/_lib/jquery.service_wrapper.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.timepicker" src="./Scripts/_lib/jquery.timepicker.js?appversion=v8.104"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1188.0" data-gr-ext-installed="">
+<div id="ieBlock" class="ui-helper-hidden">
+<span>This site requires IE 8 or later.</span>
+<p>If you are using IE 8 or later and still receive this message, make sure that you are <b>NOT</b> using 'Compatibility Mode'.</p>
+<a href="http://download.microsoft.com/download/C/C/0/CC0BD555-33DD-411E-936B-73AC6F95AE11/IE8-WindowsXP-x86-ENU.exe" target="_blank">Click Here To Download IE 8</a>
+</div>
+<div id="mainHeader"><!-- Header.htm -->
+<div id="top">
+    <div id="tContent">
+    </div>
+</div>
+<div id="header">
+    <div id="hContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+        <div class="welcome">
+            <p>
+                Welcome, <span class="employeeName evaluatorName"></span><a class="impersonationLink hidden" href="#">Change...</a>
+                </p><div class="schoolList hidden">School: <select class="schoolListSelect hidden"></select><span class="schoolListSpan hidden"></span></div>
+            <p></p>
+        </div>
+    </div>
+</div>
+<div id="topnav" style="display: none;">
+    <div id="navcountdown" class="hidden" style="float:left;background-color:red;color:white;height:17px;line-height:100%;padding-left:20px;padding-right:20px;padding-top:3px"></div>
+    <div id="topnavContent" style="float:none !important">
+        <ul>
+            <li>
+                <a href="#" id="home">Home</a>
+            </li>
+            <li>
+                <a href="#" id="help" style="display:none">Help</a>
+            </li>
+            <li>
+                <a href="#" id="profdev" style="display:none">Prof. Dev.</a>
+            </li>
+            <li>
+                <a href="#" id="systools" style="display:none">System Tools</a>
+            </li>
+            <li>
+                <a href="#" id="reports" style="display:none">Reports</a>
+            </li>
+            <li>
+                <a href="#" id="suggestions">Suggestions?</a>
+            </li>
+            <li>
+                <a href="#" id="logout">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="warningnav">
+    <div id="warningBanner" class="hidden">
+        <span id="warningBannerSpan"></span>
+    </div>
+    <div id="hVersion">
+        <span id="hVersionField" title="Version Number">v8.104</span>
+    </div>
+</div>
+
+</div>
+<div id="bodywrap" style="visibility: visible;">
+    <div id="welcome" class="clearfix">
+      <h2 class="hidden">Grow with us.</h2>
+	<div class="left">&nbsp;</div>
+	<div class="logincontent">
+		<p class="about">Journey is an evolving resource designed to support educators at all levels in student-centered professional learning and personnel evaluation activities.</p>
+		<div id="loginHolder"><!-- Login.htm -->
+<div id="loginheader" class="hidden">
+    <div id="loginheaderContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+    </div>
+</div>
+<div id="login" class="clearfix" style="margin-top:20px">
+    <h2>Log In</h2>
+    <form class="loginform">
+        <p><label>Username: </label></p>
+            <input type="text" id="txtUsername" class="wide">
+        <p><label>Password: </label> </p>
+            <input type="password" id="txtPassword">
+        <p><a href="https://password.mypolkschools.net/?from=Journey">Forgot password?</a></p>
+        <p class="hidden"><label for="chkTraining">Activate Training Mode: </label><input type="checkbox" class="hidden" id="chkTraining" style="width:50px"></p>
+        <p class="hidden"><label>Employee SAPID: </label></p>
+            <input class="hidden" type="text" id="txtSAPID" autocomplete="off">
+        <p><input type="button" id="btnLogin" class="button ui-button ui-widget ui-state-default ui-corner-all" value="Log In" role="button"></p>
+        <p>
+            <label id="lblMessage"></label>
+        </p>
+    </form>
+</div>
+</div>
+	</div>
+	<div class="right">&nbsp;</div>
+  </div>
+</div>
+<div id="mainFooter"><!-- Footer.htm -->
+<div id="footer">
+    <div id="fContent">
+        <div id="about">
+            <h3>Do you need help with Journey?</h3>
+            <p>If you need help with Journey, the Incident IQ system can put you in touch with individuals ready to assist you! Please follow these directions to get assistance:
+                </p><ul style="margin:0 !important">
+                    <li>Use the Classlink system (<a href="https://launchpad.classlink.com/polk?autosamllogin=1">https://launchpad.classlink.com/polk?autosamllogin=1</a>) to login to Incident IQ.</li>
+                    <li>Consult the following list of areas for assistance:
+                        <ul style="margin:0 !important">
+                            <li>For help understanding <b>Journey's content (forms, documents, worksheets, or evaluation policies/procedures)</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - Evaluation Processes (Forms/Worksheets/Deadlines)</li>
+                            <li>For help with questions about <b>VAM and State of Florida student performance calculations</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - VAM and State Performance</li>
+                            <li>For <strong>technical issues/pages that have errors</strong>:<br>Software / Online Systems &gt; PCPS Journey &gt; Employee Issues or Supervisor Issues</li>
+                        </ul>
+                    </li>
+                </ul>
+            <p></p>            
+        </div>
+    </div>
+</div>
+</div>
+
+
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <title>Journey - Personnel Evaluation &amp; Professional Learning System | A Polk County Public Schools Project</title>
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.13.custom.css">
+	<link rel="stylesheet" href="css/styles.less?appversion=v8.104">
+    <script src="Scripts/require.js"></script>
+    <script>
+    requirejs.config({ urlArgs: "appversion=v8.104" });
+    require({
+        baseUrl: './Scripts',
+        paths: {
+            Pages: 'Pages',
+            Services: 'Services',
+            Lib: '_lib'
+        },
+        priority: ['Lib/jquery','Lib/version']   //['Lib/jquery']
+    }, ['Pages/Default']);
+    </script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery" src="./Scripts/_lib/jquery.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/version" src="./Scripts/_lib/version.js?appversion=v8.104"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Pages/Default" src="./Scripts/Pages/Default.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/utility" src="./Scripts/_lib/utility.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/serviceConfig" src="./Scripts/Services/serviceConfig.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/authorizationService" src="./Scripts/Services/authorizationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/less" src="./Scripts/_lib/less.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/modernizr" src="./Scripts/_lib/modernizr.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie" src="./Scripts/_lib/jquery.cookie.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie.security" src="./Scripts/_lib/jquery.cookie.security.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery-ui" src="./Scripts/_lib/jquery-ui.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/observationService" src="./Scripts/Services/observationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.blockUI" src="./Scripts/_lib/jquery.blockUI.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.notice" src="./Scripts/_lib/jquery.notice.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.fileDownload" src="./Scripts/_lib/jquery.fileDownload.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/json2" src="./Scripts/_lib/json2.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.service_wrapper" src="./Scripts/_lib/jquery.service_wrapper.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.timepicker" src="./Scripts/_lib/jquery.timepicker.js?appversion=v8.104"></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.1188.0" data-gr-ext-installed="">
+<div id="ieBlock" class="ui-helper-hidden">
+<span>This site requires IE 8 or later.</span>
+<p>If you are using IE 8 or later and still receive this message, make sure that you are <b>NOT</b> using 'Compatibility Mode'.</p>
+<a href="http://download.microsoft.com/download/C/C/0/CC0BD555-33DD-411E-936B-73AC6F95AE11/IE8-WindowsXP-x86-ENU.exe" target="_blank">Click Here To Download IE 8</a>
+</div>
+<div id="mainHeader"><!-- Header.htm -->
+<div id="top">
+    <div id="tContent">
+    </div>
+</div>
+<div id="header">
+    <div id="hContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+        <div class="welcome">
+            <p>
+                Welcome, <span class="employeeName evaluatorName"></span><a class="impersonationLink hidden" href="#">Change...</a>
+                </p><div class="schoolList hidden">School: <select class="schoolListSelect hidden"></select><span class="schoolListSpan hidden"></span></div>
+            <p></p>
+        </div>
+    </div>
+</div>
+<div id="topnav" style="display: none;">
+    <div id="navcountdown" class="hidden" style="float:left;background-color:red;color:white;height:17px;line-height:100%;padding-left:20px;padding-right:20px;padding-top:3px"></div>
+    <div id="topnavContent" style="float:none !important">
+        <ul>
+            <li>
+                <a href="#" id="home">Home</a>
+            </li>
+            <li>
+                <a href="#" id="help" style="display:none">Help</a>
+            </li>
+            <li>
+                <a href="#" id="profdev" style="display:none">Prof. Dev.</a>
+            </li>
+            <li>
+                <a href="#" id="systools" style="display:none">System Tools</a>
+            </li>
+            <li>
+                <a href="#" id="reports" style="display:none">Reports</a>
+            </li>
+            <li>
+                <a href="#" id="suggestions">Suggestions?</a>
+            </li>
+            <li>
+                <a href="#" id="logout">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="warningnav">
+    <div id="warningBanner" class="hidden">
+        <span id="warningBannerSpan"></span>
+    </div>
+    <div id="hVersion">
+        <span id="hVersionField" title="Version Number">v8.104</span>
+    </div>
+</div>
+
+</div>
+<div id="bodywrap" style="visibility: visible;">
+    <div id="welcome" class="clearfix">
+      <h2 class="hidden">Grow with us.</h2>
+	<div class="left">&nbsp;</div>
+	<div class="logincontent">
+		<p class="about">Journey is an evolving resource designed to support educators at all levels in student-centered professional learning and personnel evaluation activities.</p>
+		<div id="loginHolder"><!-- Login.htm -->
+<div id="loginheader" class="hidden">
+    <div id="loginheaderContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+    </div>
+</div>
+<div id="login" class="clearfix" style="margin-top:20px">
+    <h2>Log In</h2>
+    <form class="loginform">
+        <p><label>Username: </label></p>
+            <input type="text" id="txtUsername" class="wide">
+        <p><label>Password: </label> </p>
+            <input type="password" id="txtPassword">
+        <p><a href="https://password.mypolkschools.net/?from=Journey">Forgot password?</a></p>
+        <p class="hidden"><label for="chkTraining">Activate Training Mode: </label><input type="checkbox" class="hidden" id="chkTraining" style="width:50px"></p>
+        <p class="hidden"><label>Employee SAPID: </label></p>
+            <input class="hidden" type="text" id="txtSAPID" autocomplete="off">
+        <p><input type="button" id="btnLogin" class="button ui-button ui-widget ui-state-default ui-corner-all" value="Log In" role="button"></p>
+        <p>
+            <label id="lblMessage"></label>
+        </p>
+    </form>
+</div>
+</div>
+	</div>
+	<div class="right">&nbsp;</div>
+  </div>
+</div>
+<div id="mainFooter"><!-- Footer.htm -->
+<div id="footer">
+    <div id="fContent">
+        <div id="about">
+            <h3>Do you need help with Journey?</h3>
+            <p>If you need help with Journey, the Incident IQ system can put you in touch with individuals ready to assist you! Please follow these directions to get assistance:
+                </p><ul style="margin:0 !important">
+                    <li>Use the Classlink system (<a href="https://launchpad.classlink.com/polk?autosamllogin=1">https://launchpad.classlink.com/polk?autosamllogin=1</a>) to login to Incident IQ.</li>
+                    <li>Consult the following list of areas for assistance:
+                        <ul style="margin:0 !important">
+                            <li>For help understanding <b>Journey's content (forms, documents, worksheets, or evaluation policies/procedures)</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - Evaluation Processes (Forms/Worksheets/Deadlines)</li>
+                            <li>For help with questions about <b>VAM and State of Florida student performance calculations</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - VAM and State Performance</li>
+                            <li>For <strong>technical issues/pages that have errors</strong>:<br>Software / Online Systems &gt; PCPS Journey &gt; Employee Issues or Supervisor Issues</li>
+                        </ul>
+                    </li>
+                </ul>
+            <p></p>            
+        </div>
+    </div>
+</div>
+</div>
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <title>Journey - Personnel Evaluation &amp; Professional Learning System | A Polk County Public Schools Project</title>
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.13.custom.css">
+	<link rel="stylesheet" href="css/styles.less?appversion=v8.104">
+    <script src="Scripts/require.js"></script>
+    <script>
+    requirejs.config({ urlArgs: "appversion=v8.104" });
+    require({
+        baseUrl: './Scripts',
+        paths: {
+            Pages: 'Pages',
+            Services: 'Services',
+            Lib: '_lib'
+        },
+        priority: ['Lib/jquery','Lib/version']   //['Lib/jquery']
+    }, ['Pages/Default']);
+    </script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery" src="./Scripts/_lib/jquery.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/version" src="./Scripts/_lib/version.js?appversion=v8.104"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Pages/Default" src="./Scripts/Pages/Default.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/utility" src="./Scripts/_lib/utility.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/serviceConfig" src="./Scripts/Services/serviceConfig.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/authorizationService" src="./Scripts/Services/authorizationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/less" src="./Scripts/_lib/less.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/modernizr" src="./Scripts/_lib/modernizr.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie" src="./Scripts/_lib/jquery.cookie.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.cookie.security" src="./Scripts/_lib/jquery.cookie.security.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery-ui" src="./Scripts/_lib/jquery-ui.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Services/observationService" src="./Scripts/Services/observationService.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.blockUI" src="./Scripts/_lib/jquery.blockUI.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.notice" src="./Scripts/_lib/jquery.notice.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.fileDownload" src="./Scripts/_lib/jquery.fileDownload.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/json2" src="./Scripts/_lib/json2.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.service_wrapper" src="./Scripts/_lib/jquery.service_wrapper.js?appversion=v8.104"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="Lib/jquery.timepicker" src="./Scripts/_lib/jquery.timepicker.js?appversion=v8.104"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1188.0" data-gr-ext-installed="">
+<div id="ieBlock" class="ui-helper-hidden">
+<span>This site requires IE 8 or later.</span>
+<p>If you are using IE 8 or later and still receive this message, make sure that you are <b>NOT</b> using 'Compatibility Mode'.</p>
+<a href="http://download.microsoft.com/download/C/C/0/CC0BD555-33DD-411E-936B-73AC6F95AE11/IE8-WindowsXP-x86-ENU.exe" target="_blank">Click Here To Download IE 8</a>
+</div>
+<div id="mainHeader"><!-- Header.htm -->
+<div id="top">
+    <div id="tContent">
+    </div>
+</div>
+<div id="header">
+    <div id="hContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+        <div class="welcome">
+            <p>
+                Welcome, <span class="employeeName evaluatorName"></span><a class="impersonationLink hidden" href="#">Change...</a>
+                </p><div class="schoolList hidden">School: <select class="schoolListSelect hidden"></select><span class="schoolListSpan hidden"></span></div>
+            <p></p>
+        </div>
+    </div>
+</div>
+<div id="topnav" style="display: none;">
+    <div id="navcountdown" class="hidden" style="float:left;background-color:red;color:white;height:17px;line-height:100%;padding-left:20px;padding-right:20px;padding-top:3px"></div>
+    <div id="topnavContent" style="float:none !important">
+        <ul>
+            <li>
+                <a href="#" id="home">Home</a>
+            </li>
+            <li>
+                <a href="#" id="help" style="display:none">Help</a>
+            </li>
+            <li>
+                <a href="#" id="profdev" style="display:none">Prof. Dev.</a>
+            </li>
+            <li>
+                <a href="#" id="systools" style="display:none">System Tools</a>
+            </li>
+            <li>
+                <a href="#" id="reports" style="display:none">Reports</a>
+            </li>
+            <li>
+                <a href="#" id="suggestions">Suggestions?</a>
+            </li>
+            <li>
+                <a href="#" id="logout">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="warningnav">
+    <div id="warningBanner" class="hidden">
+        <span id="warningBannerSpan"></span>
+    </div>
+    <div id="hVersion">
+        <span id="hVersionField" title="Version Number">v8.104</span>
+    </div>
+</div>
+
+</div>
+<div id="bodywrap" style="visibility: visible;">
+    <div id="welcome" class="clearfix">
+      <h2 class="hidden">Grow with us.</h2>
+	<div class="left">&nbsp;</div>
+	<div class="logincontent">
+		<p class="about">Journey is an evolving resource designed to support educators at all levels in student-centered professional learning and personnel evaluation activities.</p>
+		<div id="loginHolder"><!-- Login.htm -->
+<div id="loginheader" class="hidden">
+    <div id="loginheaderContent">
+        <h1 class="hidden">
+            Journey - Personnel Evaluation &amp; Professional Learning System
+        </h1>
+        <div class="headertext">
+            <p class="title">
+                Personnel Evaluation &amp; Professional Learning System
+            </p>
+            <p class="subtitle">
+                A Polk County Public Schools Project
+            </p>
+        </div>
+    </div>
+</div>
+<div id="login" class="clearfix" style="margin-top:20px">
+    <h2>Log In</h2>
+    <form class="loginform">
+        <p><label>Username: </label></p>
+            <input type="text" id="txtUsername" class="wide">
+        <p><label>Password: </label> </p>
+            <input type="password" id="txtPassword">
+        <p><a href="https://password.mypolkschools.net/?from=Journey">Forgot password?</a></p>
+        <p class="hidden"><label for="chkTraining">Activate Training Mode: </label><input type="checkbox" class="hidden" id="chkTraining" style="width:50px"></p>
+        <p class="hidden"><label>Employee SAPID: </label></p>
+            <input class="hidden" type="text" id="txtSAPID" autocomplete="off">
+        <p><input type="button" id="btnLogin" class="button ui-button ui-widget ui-state-default ui-corner-all" value="Log In" role="button"></p>
+        <p>
+            <label id="lblMessage"></label>
+        </p>
+    </form>
+</div>
+</div>
+	</div>
+	<div class="right">&nbsp;</div>
+  </div>
+</div>
+<div id="mainFooter"><!-- Footer.htm -->
+<div id="footer">
+    <div id="fContent">
+        <div id="about">
+            <h3>Do you need help with Journey?</h3>
+            <p>If you need help with Journey, the Incident IQ system can put you in touch with individuals ready to assist you! Please follow these directions to get assistance:
+                </p><ul style="margin:0 !important">
+                    <li>Use the Classlink system (<a href="https://launchpad.classlink.com/polk?autosamllogin=1">https://launchpad.classlink.com/polk?autosamllogin=1</a>) to login to Incident IQ.</li>
+                    <li>Consult the following list of areas for assistance:
+                        <ul style="margin:0 !important">
+                            <li>For help understanding <b>Journey's content (forms, documents, worksheets, or evaluation policies/procedures)</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - Evaluation Processes (Forms/Worksheets/Deadlines)</li>
+                            <li>For help with questions about <b>VAM and State of Florida student performance calculations</b>:<br>Software / Online Systems &gt; PCPS Journey &gt; Support - VAM and State Performance</li>
+                            <li>For <strong>technical issues/pages that have errors</strong>:<br>Software / Online Systems &gt; PCPS Journey &gt; Employee Issues or Supervisor Issues</li>
+                        </ul>
+                    </li>
+                </ul>
+            <p></p>            
+        </div>
+    </div>
+</div>
+</div>
+
+
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
